@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/*import Prihod from './components/Prihod.jsx';*/
+import './App.css'
+import React from 'react'
+import Navbar from './components/Navbar.jsx'
+import Header from './components/Header.jsx'
+import KontrAgent from './components/KontrAgent.jsx'
+import Prihod from './components/Prihod.jsx'
+import Input from './components/Input/Input.jsx'
+import {BrowserRouter, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className="app-wrapper">
+      <Header />   
+      <Navbar />
+      <div className="app-wrapper-content">
+      <Route path='/Input' component={Input}/>
+        <Route path='/KontrAgent' component={KontrAgent}/>
+        <Route path='/Prihod' component={Prihod}/>
+      </div>
     </div>
+    </BrowserRouter>
   );
 }
 

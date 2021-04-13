@@ -1,0 +1,11 @@
+.Navbar{
+    grid-area: n;
+    background-color: #edeef0;
+    height: auto;
+    
+}
+.item a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
